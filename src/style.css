@@ -1,0 +1,106 @@
+header h1	
+	{font-size: 18px;
+	font-style:italic;
+	font-weight:bolder;
+	padding: 10px;
+	text-align:center;}
+
+.button
+{ text-align: center;
+  text-decoration: none;
+    margin:0 auto;
+    display:block;
+  }
+	
+.infobox {
+width: 100%;
+padding: 20px;
+box-sizing: border-box;
+border-radius: 6px 6px 6px 6px;
+border-style: solid;
+border-width: 1px;
+background:	lightgrey;
+}
+
+/*.centered {
+    position:relative;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }*/
+  
+ .centered { 
+ text-align: center;
+ text-decoration: none;
+ margin:0 auto;
+ display:block;
+  } 
+
+.lic { margin-left: 3em; font-size: .9em; background: #eee; border: thin solid black; padding: 1em;}
+
+textarea {
+    display: block;
+ /*   margin-left: auto;
+    margin-right: auto;*/
+}
+
+.tiledBackground {
+    background-size: 150px;
+    width: 770px;
+    height: 400px;
+    border: 0px;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+      .box {
+        width: 800px;
+        display: flex;
+      }
+
+      .box > * {
+        flex: 1 auto;
+      }
+
+/*two columns with different size*/
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 40%;
+}
+
+.right {
+  width: 60%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*end two columns with different size*/
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #section-to-print, #section-to-print * {
+    visibility: visible;
+  }
+  #section-to-print {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
