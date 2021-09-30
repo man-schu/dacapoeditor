@@ -1,7 +1,7 @@
 {
   "name": "musedit",
   "productName": "musedit",
-  "version": "0.9.01",
+  "version": "0.9.02",
   "description": "MusEdit - ABC Music Editor",
   "main": "src/index.js",
   "scripts": {
