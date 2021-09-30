@@ -1,12 +1,9 @@
 {
   "name": "musedit",
   "productName": "musedit",
-  "version": "0.9.03",
+  "version": "0.9.04",
   "description": "MusEdit - ABC Music Editor",
   "main": "src/index.js",
-  "directories": {
-        "buildResources": "build"
-    },
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -16,8 +13,8 @@
   },
   "keywords": [],
   "author": {
-    "name": "man-schu",
-    "email": "msori58@gmx.net"
+    "name": "Manfred Schulenburg",
+    "email": "info@blueseal.eu"
   },
   "license": "MIT",
   "config": {
@@ -27,7 +24,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "musedit"
+            "name": "electron_publish_example"
           }
         },
         {
@@ -44,6 +41,18 @@
           "name": "@electron-forge/maker-rpm",
           "config": {}
         }
+      ],
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "erikhofer",
+              "name": "electron-publish-example",
+              "draft": true
+            }
+          }
+        }
       ]
     }
   },
@@ -51,11 +60,12 @@
     "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.61",
-    "@electron-forge/maker-deb": "^6.0.0-beta.61",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.61",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.61",
-    "@electron-forge/maker-zip": "^6.0.0-beta.61",
-    "electron": "15.0.0"
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "@electron-forge/publisher-github": "^6.0.0-beta.54",
+    "electron": "11.1.1"
   }
 }
