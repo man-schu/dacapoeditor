@@ -1,9 +1,12 @@
 {
   "name": "musedit",
   "productName": "musedit",
-  "version": "0.9.02",
+  "version": "0.9.03",
   "description": "MusEdit - ABC Music Editor",
   "main": "src/index.js",
+  "directories": {
+        "buildResources": "build"
+    },
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
