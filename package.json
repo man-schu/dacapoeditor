@@ -1,7 +1,7 @@
 {
   "name": "musedit",
   "productName": "musedit",
-  "version": "0.9.04",
+  "version": "0.9.05",
   "description": "MusEdit - ABC Music Editor",
   "main": "src/index.js",
   "scripts": {
@@ -13,8 +13,8 @@
   },
   "keywords": [],
   "author": {
-    "name": "Manfred Schulenburg",
-    "email": "info@blueseal.eu"
+    "name": "man-schu",
+    "email": "msori58@gmx.net"
   },
   "license": "MIT",
   "config": {
