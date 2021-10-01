@@ -13,7 +13,7 @@ https://abcnotation.com/wiki/abc:standard:v2.2 - reference by Chris Walshaw, the
 
 https://elmu.online/articles/hilfe-abcnotation (in German)
 
-http://kurs.schacherl.info/ABC-Musiknotation/abc_syntax/abc_syntax.html - an extensive manual (in German)
+http://kurs.schacherl.info/ABC-Musiknotation/abc_syntax/abc_syntax.html - an extensive manual in a downloadable html file (in German, but rather self-explaining, therefore, no need to understand German)
 
 
 
