@@ -1,7 +1,7 @@
 'use strict';
 
 //taken from https://gist.github.com/tsuriga/2aeedf9579bc55037519
-//'note' replaced by 'abcfile'
+//'note' replaced by 'abc'
 
 const fs = require('fs'),
   remote = require('remote'),
@@ -10,7 +10,7 @@ const fs = require('fs'),
 document.addEventListener('DOMContentLoaded', function() {
   var btnLoad = document.getElementById('load'),
     btnSave = document.getElementById('save'),
-    abcfile = document.getElementById('abcfile');
+    abc = document.getElementById('abc');
 
   btnLoad.addEventListener('click', function () {
     dialog.showOpenDialog(function (filePaths) {
