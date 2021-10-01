@@ -22,6 +22,21 @@ http://kurs.schacherl.info/ABC-Musiknotation/abc_syntax/abc_syntax.html - an ext
 https://abcnotation.com/examples
 
 
-### ABC Music sheets
+### ABC tunes
 https://abcnotation.com/tunePage?a=trillian.mit.edu/~jc/music/abc/mirror/musicaviva.com/england/what-shall-we/what-shall-we-1/0000
 
+https://sites.google.com/site/lotroabc/songs
+
+https://abcnotation.com/tunes - a list of tune collections
+
+### ABC tune finder
+
+https://abcnotation.com/search
+
+http://trillian.mit.edu/~jc/cgi/abc/tunefind
+
+http://john-chambers.us/~jc/cgi/abc/tunefind
+
+https://www.folktunefinder.com/
+
+http://abctunesearch.com/
