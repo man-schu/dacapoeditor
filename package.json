@@ -1,9 +1,15 @@
 {
   "name": "musedit",
   "productName": "musedit",
-  "version": "0.9.07",
+  "version": "0.9.08",
   "description": "MusEdit - ABC Music Editor",
-  "main": "src/index.js",
+  "main": "index.js",
+  "directories": {
+        "buildResources": "build"
+    },
+  "files": [
+      "build/**/*"
+    ],
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -16,10 +22,11 @@
     "name": "man-schu",
     "email": "msori58@gmx.net"
   },
-  "license": "MIT",
+  "license": "GNU General Public License",
   "config": {
     "forge": {
-      "packagerConfig": {},
+      "packagerConfig": {
+              },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
@@ -29,17 +36,29 @@
         },
         {
           "name": "@electron-forge/maker-zip",
-          "platforms": [
+                   "platforms": [
             "darwin"
           ]
         },
         {
           "name": "@electron-forge/maker-deb",
-          "config": {}
+                    "config": {}
         },
         {
           "name": "@electron-forge/maker-rpm",
-          "config": {}
+                    "config": {}
+        }
+      ],
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "man-schu",
+              "name": "musedit",
+              "draft": true
+            }
+          }
         }
       ]
     }
@@ -48,11 +67,12 @@
     "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0-beta.61",
-    "@electron-forge/maker-deb": "^6.0.0-beta.61",
-    "@electron-forge/maker-rpm": "^6.0.0-beta.61",
-    "@electron-forge/maker-squirrel": "^6.0.0-beta.61",
-    "@electron-forge/maker-zip": "^6.0.0-beta.61",
-    "electron": "15.0.0"
+    "@electron-forge/cli": "^6.0.0-beta.54",
+    "@electron-forge/maker-deb": "^6.0.0-beta.54",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.54",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
+    "@electron-forge/maker-zip": "^6.0.0-beta.54",
+    "@electron-forge/publisher-github": "^6.0.0-beta.54",
+    "electron": "11.1.1"
   }
 }
