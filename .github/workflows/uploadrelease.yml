@@ -9,7 +9,7 @@ name: Upload Release Asset
 
 jobs:
   build:
-    name: Upload Release
+    name: Upload Release Asset
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
