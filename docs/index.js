@@ -1,4 +1,4 @@
-const { app, BrowserWindow, Menu } = require('electron');
+const { app, BrowserWindow, Menu; dialog } = require('electron');
 
 const path = require('path');
 
@@ -71,12 +71,9 @@ if (process.platform === 'darwin') {
 
 // see https://www.geeksforgeeks.org/save-files-in-electronjs/
 
-// const fs = require('fs');
-// Importing dialog module using remote
-// const dialog = electron.remote.dialog; => error message: electron is not defined
-
 const fs = require('fs');
-const dialog = window.require('electron').remote.dialog;
+// Importing dialog module using remote
+const dialog = electron.remote.dialog;
  
 var save = document.getElementById('save');
   
