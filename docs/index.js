@@ -73,7 +73,7 @@ if (process.platform === 'darwin') {
 
 const fs = require('fs');
 // Importing dialog module using remote
-const dialog = electron.remote.dialog;
+// const dialog = electron.remote.dialog; => SyntaxError: Identifier 'dialog' has already been declared
  
 var save = document.getElementById('save');
   
