@@ -85,16 +85,6 @@ https://stackoverflow.com/questions/50126062/how-to-use-filesaver-js-to-save-tex
     <div class="column left">
 	    
 	    
-	    <section id="text-demo">
-        <h2>Saving text</h2>
-        <textarea class="input" id="text" placeholder="Once upon a time..."/>
-        <form id="text-options">
-            <label>Filename: <input type="text" class="filename" id="text-filename" placeholder="a plain document"/>.txt</label>
-            <input type="submit" value="Save"/>
-        </form>
-    </section>
-	    
-	    
       <section>
 	  <input class="centered" type="file">
 
@@ -119,8 +109,12 @@ c2 C2 C2 |F2 GF ED|E2 FE DC|D2 ED CB, C4||
     </textarea>
 	      	      <span id="warnings"></span>
 	      <br>
-	<input type="button" id="save" value="Save abc file" />
-<!-- save to file system function taken from https://www.geeksforgeeks.org/save-files-in-electronjs/ -->
+<form id="text-options">
+            <label>Filename: <input type="text" class="filename" id="text-filename" placeholder="ABC file"/>.txt</label>
+            <input type="submit" value="Save"/>
+        </form>
+	      
+	      
 	      <div class="popup" onclick="myFunction()"><button>Info</button>
   <span class="popuptext" id="myPopup">Please note that the functionality to save a file to the file system will only work on the stand-alone desktop app, not on the website version.<br>However, in case you prefer using the website based application, you can still copy and paste to a normal text file.</span>
  </div>
