@@ -144,11 +144,11 @@ c2 C2 C2 |F2 GF ED|E2 FE DC|D2 ED CB, C4||
   <script src="FileSaver.js"></script>
         <script type="text/javascript">
             function download() {
-  var save = document.getElementById("sample").value;
+  var save = document.getElementById("abc").value;
   var blob = new Blob([save], {
     type: "text/plain;charset=utf-8"
   });
-  saveAs(blob, "sample-file.txt");
+  saveAs(blob, "sample-file.abc");
 }
         </script>
 </body>
