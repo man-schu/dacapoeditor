@@ -111,7 +111,21 @@ c2 C2 C2 |F2 GF ED|E2 FE DC|D2 ED CB, C4||
     </textarea>
 	      	      <span id="warnings"></span>
 	      <br>
-        <button id="button" onclick="download();">save abc file</button>
+      <!--  <button id="button" onclick="download();">save abc file</button>
+  <script type="text/javascript">
+            function download() {
+  var save = document.getElementById("abc").value;
+  var blob = new Blob([save], {
+    type: "text/plain;charset=utf-8"
+  });
+  saveAs(blob, "sample-file.abc");
+}
+        </script> => disadvantage: cannot rename filename -->
+	   
+	      <form id="text-options">
+            <label>Filename: <input type="text" class="filename" id="text-filename" placeholder="an abc document"/>.abc</label>
+            <input type="submit" value="Save"/>
+        </form>
 
         <script type="text/javascript">
             function download() {
