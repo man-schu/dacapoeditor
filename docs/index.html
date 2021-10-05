@@ -109,15 +109,26 @@ c2 C2 C2 |F2 GF ED|E2 FE DC|D2 ED CB, C4||
     </textarea>
 	      	      <span id="warnings"></span>
 	      <br>
-<form id="text-options">
-            <label>Filename: <input type="text" class="filename" id="text-filename" placeholder="ABC file"/>.txt</label>
-            <input type="submit" value="Save"/>
-        </form>
+        <button id="button" onclick="download();">save as</button>
+
+        <script src="FileSaver.js"></script>
+        <script type="text/javascript">
+            function download() {
+  var save = document.getElementById("abc").value;
+  var blob = new Blob([save], {
+    type: "text/plain;charset=utf-8"
+  });
+  saveAs(blob, "sample-file.txt");
+}
+        </script>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/eligrey/FileSaver.js/5ed507ef8aa53d8ecfea96d96bc7214cd2476fd2/FileSaver.min.js"></script>
 	      
 	      
-	      <div class="popup" onclick="myFunction()"><button>Info</button>
+<!--	      <div class="popup" onclick="myFunction()"><button>Info</button>
   <span class="popuptext" id="myPopup">Please note that the functionality to save a file to the file system will only work on the stand-alone desktop app, not on the website version.<br>However, in case you prefer using the website based application, you can still copy and paste to a normal text file.</span>
- </div>
+ </div> -->
 	      
 	      <br><br>
 	     
@@ -141,15 +152,5 @@ c2 C2 C2 |F2 GF ED|E2 FE DC|D2 ED CB, C4||
   </main>
   <script src="import.js"></script>
 
-  <script src="FileSaver.js"></script>
-        <script type="text/javascript">
-            function download() {
-  var save = document.getElementById("abc").value;
-  var blob = new Blob([save], {
-    type: "text/plain;charset=utf-8"
-  });
-  saveAs(blob, "sample-file.abc");
-}
-        </script>
 </body>
 </html>
