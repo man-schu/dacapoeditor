@@ -95,18 +95,35 @@ does not need jquery! -->
 	  <br>    
     <textarea class="input" id="abc" cols="80" rows="25" spellcheck="false">
 X: 1
-T: Menuett in G-Dur
-C: Christian Petzold
-O: 1677 - 1733
-P: aus dem Notenbüchlein für Anna Magdalena Bach
-M: 3/4
-L: 1/8
+T: Here comes the title
+T: Here may come a subtitle
+C: Here comes the composer
+O: Year/Date/Century
+P: Parts (if any)
+Q: "Allegro" 1/4 = 120 % tempo
+S: Here may come the source
+M:4/4
 K: C
-%%measurenb 0
-!f! G2 CD EF|G2 C2 C2|A2 FG AB|c2 C2 C2|F2 GF ED|
-E2 FE DC|B,2 CD EC|D4>|G4 CD EF|!p!G2 C2 C2|A2 FG AB|
-c2 C2 C2 |F2 GF ED|E2 FE DC|D2 ED CB, C4||
-
+%%barsperstaff 7
+%%vocalfont Times 12
+%%score [1 | 2 | 3 | 4]
+%%scale 0.95
+%%pagewidth 21cm
+L: 1/4
+V:1 name="S" sname="S."
+A2|A G A B|
+w:here come the ly-rics
+V:2 name="A" sname="A."
+E2|E E E G|
+w:
+V:3 name="T" sname="T."
+c2|c B c d|
+w:
+V:4 bass name="B" sname="B." 
+A,2|A, E, A, G,|
+w: 
+    
+W:Some more text below the score
     
     </textarea>
     <br>
