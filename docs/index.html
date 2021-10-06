@@ -109,15 +109,11 @@ c2 C2 C2 |F2 GF ED|E2 FE DC|D2 ED CB, C4||
 
     
     </textarea>
-	      	      <span id="warnings"></span>
-	      <br>
-   
-	      <form id="text-options">
-            <label>Filename: <input type="text" class="filename" id="text-filename" placeholder="an abc document"/>.abc</label>
-            <input type="submit" value="Save"/>
-        </form>
+    <br>
+     <button id="button" onclick="download();">save as</button>
+     <label>Filename: <input type="text" class="input" id="text-filename" placeholder="abc-file"/>.abc</label>
 
-        <script type="text/javascript">
+<script type="text/javascript">
 function download() {
   var save = document.getElementById("abc").value;
   var filename = document.getElementById("text-filename").value;
@@ -127,8 +123,7 @@ function download() {
   if (filename == "") {saveAs(blob, "abc-file.abc");}
   else {saveAs(blob, filename+".abc");}
 }
-        </script>
-       
+	      </script>
 	      <br><br>
 	     
 
