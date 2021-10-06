@@ -11,10 +11,17 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
 
 const createWindow = () => {
   // Create the browser window.
-  const mainWindow = new BrowserWindow({
+//  const mainWindow = new BrowserWindow({
    // width: 800,height: 600,icon: __dirname + '/icon.ico'});
-    width: 800,height: 600});
-  // and load the index.html of the app.
+  //  width: 800,height: 600});
+  // and load the index.html of the app. */
+  
+  const mainWindow = new BrowserWindow({
+    width: 800,height: 600,
+   webPreferences: {
+    contextIsolation: true
+  }
+  });
   
  mainWindow.setMenuBarVisibility(false);
   
