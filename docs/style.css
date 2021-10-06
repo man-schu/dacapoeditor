@@ -11,6 +11,26 @@ header h1
     margin:0 auto;
     display:block;
   }
+  
+  .button-2 {
+  background-color: #FFFFFF;
+  border: 0;
+  border-radius: .5rem;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none solid;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.button-2:hover {
+  background-color: rgb(249,250,251);
+}
+
+
+
+
 	
 .infobox {
 width: 100%;
@@ -22,13 +42,7 @@ border-width: 1px;
 background:	lightgrey;
 }
 
-/*.centered {
-    position:relative;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-  }*/
-  
+
  .centered { 
  text-align: center;
  text-decoration: none;
@@ -62,7 +76,7 @@ background:	lightgrey;
 }
 
 /* got it from here: https://www.w3schools.com/howto/howto_js_popup.asp */
-/* Popup arrow */
+/* Popup arrow - currently not in use*/
 .popup .popuptext::after {
   content: "";
   position: absolute;
@@ -94,8 +108,6 @@ background:	lightgrey;
 
 textarea {
     display: block;
- /*   margin-left: auto;
-    margin-right: auto;*/
 }
 
 .tiledBackground {
@@ -124,9 +136,11 @@ textarea {
 
 /* Create two unequal columns that floats next to each other */
 .column {
-  float: left;
+ float: left;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  display: grid;
+  gap: 4px;
+  grid-auto-flow: column;
 }
 
 .left {
