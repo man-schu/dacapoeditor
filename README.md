@@ -3,6 +3,8 @@ MusEdit is a music sheet editor based on the ABC syntax.
 
 See here how it works: https://man-schu.github.io/musedit/
 
+A standalone version based on Electron is in development.
+
 ## ABC tutorials
 
 http://abcplus.sourceforge.net/abcplus_en.html - a full manual by Guido Gonzato
