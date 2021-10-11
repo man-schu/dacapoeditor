@@ -1,7 +1,7 @@
 {
   "name": "dacapoeditor",
   "productName": "DaCapo Editor",
-  "version": "0.9.18",
+  "version": "0.9.19",
   "description": "DaCapo Editor - ABC Music Editor",
   "main": "docs/index.js",
   "directories": {
@@ -31,7 +31,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "musedit"
+            "name": "dacapoeditor"
           }
         },
         {
