@@ -1,5 +1,5 @@
 # DaCapo Editor
-DaCapo Editor is a music sheet editor based on the ABC syntax.
+DaCapo Editor is a music sheet editor based on the ABC syntax with which you can write easily music scores and partitions.
 
 See here how it works: https://man-schu.github.io/dacapoeditor/
 
