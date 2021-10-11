@@ -1,5 +1,5 @@
-# musedit
-MusEdit is a music sheet editor based on the ABC syntax.
+# DaCapo Editor
+DaCapo Editor is a music sheet editor based on the ABC syntax.
 
 See here how it works: https://man-schu.github.io/musedit/
 
