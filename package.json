@@ -1,8 +1,8 @@
 {
-  "name": "musedit",
-  "productName": "musedit",
-  "version": "0.9.17",
-  "description": "MusEdit - ABC Music Editor",
+  "name": "dacapoeditor",
+  "productName": "DaCapo Editor",
+  "version": "0.9.18",
+  "description": "DaCapo Editor - ABC Music Editor",
   "main": "docs/index.js",
   "directories": {
         "buildResources": "build"
@@ -55,7 +55,7 @@
           "config": {
             "repository": {
               "owner": "man-schu",
-              "name": "musedit",
+              "name": "dacapoeditor",
               "draft": true
             }
           }
