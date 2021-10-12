@@ -140,6 +140,8 @@ textarea {
 }
 
 /* Create two unequal columns that floats next to each other */
+@media (min-width: 1081px) {
+
 .column {
  float: left;
   padding: 10px;
@@ -155,12 +157,18 @@ textarea {
 .right {
   width: 60%;
 }
-
+}
 /* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
+}
+
+@media (max-width: 1080px) {
+.column {
+ float: none;
+}
 }
 /*end two columns with different size*/
 
