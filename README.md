@@ -3,7 +3,7 @@ DaCapo Editor is a music sheet editor based on the ABC syntax with which you can
 
 See here how it works: https://man-schu.github.io/dacapoeditor/
 
-Standalone desktop versions based on Electron can be downloaded on https://github.com/man-schu/dacapoeditor/releases/latest/.
+A standalone desktop version based on Electron can be downloaded on https://github.com/man-schu/dacapoeditor/releases/latest/.
 
 ## ABC tutorials
 
