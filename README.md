@@ -24,7 +24,12 @@ http://kurs.schacherl.info/ABC-Musiknotation/abc_syntax/abc_syntax.html - an ext
 https://abcnotation.com/examples
 
 
-### ABC tunes
+## ABC tunes
+
+http://openhymnal.org/Abc/
+
+http://abcplus.sourceforge.net/
+
 https://abcnotation.com/tunePage?a=trillian.mit.edu/~jc/music/abc/mirror/musicaviva.com/england/what-shall-we/what-shall-we-1/0000
 
 https://sites.google.com/site/lotroabc/songs
@@ -42,3 +47,4 @@ http://john-chambers.us/~jc/cgi/abc/tunefind
 https://www.folktunefinder.com/
 
 http://abctunesearch.com/
+
