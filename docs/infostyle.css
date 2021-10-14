@@ -1,0 +1,226 @@
+body {
+background-color: #FFFFF0;
+counter-reset: h2counter;
+  }
+
+h1 {
+        counter-reset: h2counter;
+		}
+		
+h2 {
+	margin-top: 30px !important;
+}
+	
+h2:before {
+        content: counter(h2counter) ".\0000a0\0000a0";
+        counter-increment: h2counter;
+        counter-reset: h3counter;
+    }
+h3:before {
+        content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+        counter-increment: h3counter;
+    }
+
+header h1	
+	{font-size: 18px;
+	font-style:italic;
+	font-weight:bolder;
+	padding: 10px;
+	text-align:center;}
+
+#toc_container {
+    background: #f9f9f9 none repeat scroll 0 0;
+    border: 1px solid #aaa;
+    display: table;
+    font-size: 95%;
+    margin-bottom: 1em;
+    padding: 20px;
+    width: auto;
+}
+
+
+
+.button
+{ text-align: center;
+  text-decoration: none;
+    margin:0 auto;
+    display:block;
+  }
+  
+  .button-2 {
+  background-color: #FFFFFF;
+  border: 0;
+  border-radius: .5rem;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none solid;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.button-2:hover {
+  background-color: rgb(249,250,251);
+}
+
+
+table, td {
+border: 1px solid #000000;
+font-family:Verdana, Geneva, sans-serif;
+border-collapse: collapse;
+text-align:	left;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+ .abcbox { 
+ background-color: #FFFFFF;
+ border: 1px solid #000000;
+ text-align: left;
+ padding: 10px;
+ width: -moz-fit-content;
+ width: fit-content;
+ block-size: fit-content;
+  } 
+	
+.infobox {
+width: 100%;
+padding: 20px;
+box-sizing: border-box;
+border-radius: 6px 6px 6px 6px;
+border-style: solid;
+border-width: 1px;
+background:	lightgrey;
+}
+
+
+
+ .infobox2 { 
+ background-color: #F0FFFF;
+ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ text-align: left;
+ padding: 10px;
+ width: -moz-fit-content;
+ width: fit-content;
+ block-size: fit-content;
+  } 
+
+
+.lic { margin-left: 3em; font-size: .9em; background: #eee; border: thin solid black; padding: 1em;}
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 280px;
+  background-color: #555;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 8px 8px 8px 8px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* got it from here: https://www.w3schools.com/howto/howto_js_popup.asp */
+/* Popup arrow - currently not in use*/
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+textarea {
+    display: block;
+}
+
+.tiledBackground {
+    background-size: 150px;
+    width: 770px;
+    height: 400px;
+    border: 0px;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+      .box {
+        width: 800px;
+        display: flex;
+      }
+
+      .box > * {
+        flex: 1 auto;
+      }
+
+/*two columns with different size*/
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+@media (min-width: 1081px) {
+
+.column {
+ float: left;
+  padding: 10px;
+  display: grid;
+  gap: 4px;
+  grid-auto-flow: column;
+}
+
+.left {
+  width: 40%;
+}
+
+.right {
+  width: 60%;
+}
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media (max-width: 1080px) {
+.column {
+ float: none;
+}
+}
+/*end two columns with different size*/
+
