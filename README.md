@@ -17,7 +17,7 @@ https://elmu.online/articles/hilfe-abcnotation (in German)
 
 http://kurs.schacherl.info/ABC-Musiknotation/abc_syntax/abc_syntax.html - an extensive manual in a downloadable html file (in German)
 
-
+https://www.biteyourownelbow.com/abcnotation.htm - a very short introduction
 
 
 ### ABC syntax examples
