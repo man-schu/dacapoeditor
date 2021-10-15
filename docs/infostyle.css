@@ -73,6 +73,7 @@ margin-left: auto;
 margin-right: auto;
 }
 
+.bordered {border:1px solid #000000;}
 
  .abcbox { 
  background-color: #FFFFFF;
