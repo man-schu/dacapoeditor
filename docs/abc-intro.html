@@ -7,9 +7,30 @@
   <meta name="author" content="Manfred Schulenburg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="infostyle.css" rel="stylesheet" type="text/css" media="screen">
+  <link rel="stylesheet" href="infostyle.css" type="text/css" media="print" >
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <title>ABC introduction</title>
-
+<style>
+function printDiv() {
+    var divToPrint = document.getElementById('table');
+    var htmlToPrint = '' +
+        '&gt;style type="text/css">' +
+        'table th, table td {' +
+        'border:1px solid #000;' +
+        'padding;1.5em;' +
+        '}' +
+		'img {' +
+        'max-width: 400px;' +
+		'height: auto;' +
+        '}' +
+        '&gt>/style>';
+    htmlToPrint += divToPrint.outerHTML;
+    newWin = window.open("");
+    newWin.document.write(htmlToPrint);
+    newWin.print();
+    newWin.close();
+}
+  </style>
 </head>
 <body>
 
@@ -23,6 +44,7 @@
 
 <h2>Notes only</h2>
 <p>The following example is actually less than the minimum:</p>
+<p>ABC notation:</p>
 <div class="abcbox">
 <code>A2 Bc|cB A2|</code></p>
 </div>
@@ -33,6 +55,7 @@
 
 <h2>Notes and minimum header tags</h2>
 <p>The following example is normally considered as the minimum defined in the ABC notation standard:</p>
+<p>ABC notation:</p>
 <div class="abcbox"> 
 <code>
 X:1<br>
@@ -44,17 +67,19 @@ A2 Bc|cB A2|
 </div>
 <p>Result:</p>
 <img src="examples/example02.png" alt="the minimum">
+
+<p>Notations and their meanings:</p>
 <div class="infobox2"> 
 <table>
   <tr><td><code>X:1</code></td><td>The piece of music shown in the file is number 1.<br>Most abc files contain only one piece of music, but it can contain more.</td></tr>
   <tr><td><code>M:4/4</code></td><td>The metre is 4/4.</td></tr>
   <tr><td><code>K:C</code></td><td>The key (clef) is treble.</td></tr>
   <tr><td><code>L:1/8</code></td><td>The note unit length is 1/8.</td></tr>
-
 </table>
 </div>
-<p>Therefore, in this case, if we want to display a note of a length of 1/4, we put a 2 behind the note.<br>Likewise, <code>A/2</code> or <code>A1/2</code> would display a note of a sixteenth unit length as follows:</p>
 
+<p>So, if we want to display a note of a length of 1/4, we put a 2 behind the note.<br>Likewise, <code>A/2</code> or <code>A1/2</code> would display a note of a sixteenth unit length as follows:</p>
+<p>ABC notation:</p>
 <div class="abcbox"> 
 <code>
 X:1<br>
@@ -68,7 +93,7 @@ A/2 A1/2 Bc|cB A2|
 <img src="examples/example03.png" alt="the minimum">
 
 <h2>Example for a choir score</h2>
-
+<p>ABC notation:</p>
 <div class="abcbox"> 
 <code>
 X: 1<br>
@@ -97,7 +122,7 @@ B,2 B,B,|F,2 F,F,|E,2 E,E,|B,2 B,2|B,2 B,B,|F,F, F,F,|E,2 E,E,|B,2 B,2||<br>
 </div>
 <p>Result:</p>
 <img src="examples/example04.png" alt="choir score">
-
+<p>Notations and their meanings:</p>
 <div class="infobox2"> 
 <table>
   <tr><td><code>T: ¡Ay! Linda Amiga</code></td><td>The title.<br>Note that a second line with a <code>T:</code> tag would create a second title line.</td></tr>
@@ -116,7 +141,7 @@ B,2 B,B,|F,2 F,F,|E,2 E,E,|B,2 B,2|B,2 B,B,|F,F, F,F,|E,2 E,E,|B,2 B,2||<br>
 
 
 <h2>Some more often used symbols in ABC notation</h2>
-
+<p>ABC notation:</p>
 <div class="abcbox"> 
 <code>
 X: 1<br>
@@ -134,10 +159,10 @@ L: 1/8<br>
 </div>
 <p>Result:</p>
 <img src="examples/example05.png" alt="some often used symbols">
-
+<p>Notations and their meanings:</p>
 <div class="infobox2"> 
 <table>
-  <tr><td><code>!p!</code></td><td>Dynamics like "p" (piano), "f" (forte) etc. placed under the note.</td></tr>
+  <tr><td><code>!p!</code></td><td>Dynamics (here: piano) placed under the note.</td></tr>
   <tr><td><code>(D E)</code></td><td>Notes in brackets: slur (legato) </td></tr>
   <tr><td><code>E>G</code></td><td>"Greater than" splits the notes before and after the symbol in the ration 3:1.</td></tr>
   <tr><td><code>3ABc</code></td><td>Triplet</td></tr>
@@ -150,7 +175,7 @@ L: 1/8<br>
 
 
 <h2>The notes</h2>
-
+<p>ABC notation:</p>
 <div class="abcbox"> 
 <code>
 A, B, C D E F G A B c d e f g a b c' d' e'
@@ -159,7 +184,27 @@ A, B, C D E F G A B c d e f g a b c' d' e'
 <p>Result:</p>
 <img src="examples/example06.png" alt="the notes">
 
-
+<h2>Bass key</h2>
+<p>ABC notation:</p>
+<div class="abcbox"> 
+<code>
+X: 1<br>
+M:4/4<br>
+K: C<br>
+L: 1/8<br>
+V: 1 bass<br>
+D z G,F, z2 B,2|<br>
+</code>
+</div>
+<p>Result:</p>
+<img src="examples/example07.png" alt="the notes">
+<p>Notations and their meanings:</p>
+<div class="infobox2"> 
+<table>
+  <tr><td><code>V: 1 bass</code></td><td>One vocal line only. Bass.</td></tr>
+  <tr><td><code>z</code></td><td>Break.</td></tr>
+</table>
+</div>
 
   </main>
 
