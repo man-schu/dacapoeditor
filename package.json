@@ -1,7 +1,7 @@
 {
   "name": "dacapoeditor",
   "productName": "dacapoeditor",
-  "version": "0.9.24",
+  "version": "0.9.25",
   "description": "DaCapo Editor - ABC Music Editor",
   "main": "docs/index.js",
   "directories": {
@@ -26,26 +26,32 @@
   "config": {
     "forge": {
       "packagerConfig": {
+         "icon": "docs/images/icons/icon"
               },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "dacapoeditor"
+            "name": "dacapoeditor",
+            "setupIcon": "docs/images/icons/icon.ico",
+            "iconUrl": "https://raw.githubusercontent.com/man-schu/dacapoeditor/main/images/icons/icon.ico"
           }
         },
         {
-          "name": "@electron-forge/maker-zip",
+          "name": "@electron-forge/maker-dmg",
+          "icon": "docs/images/icons/icon.icns",
                    "platforms": [
             "darwin"
           ]
         },
         {
           "name": "@electron-forge/maker-deb",
+          "icon": "docs/images/icons/icon.png",
                     "config": {}
         },
         {
           "name": "@electron-forge/maker-rpm",
+          "icon": "docs/images/icons/icon.png",
                     "config": {}
         }
       ],
@@ -64,7 +70,8 @@
     }
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "electron": ">=13.3.0"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",
@@ -73,6 +80,6 @@
     "@electron-forge/maker-squirrel": "^6.0.0-beta.54",
     "@electron-forge/maker-zip": "^6.0.0-beta.54",
     "@electron-forge/publisher-github": "^6.0.0-beta.54",
-    "electron": "11.1.1"
+    "electron": "13.3.0"
   }
 }
