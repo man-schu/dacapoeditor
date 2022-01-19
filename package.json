@@ -1,7 +1,7 @@
 {
   "name": "dacapoeditor",
   "productName": "dacapoeditor",
-  "version": "0.9.25",
+  "version": "0.9.26",
   "description": "DaCapo Editor - ABC Music Editor",
   "main": "docs/index.js",
   "directories": {
