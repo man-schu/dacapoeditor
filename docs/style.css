@@ -185,14 +185,6 @@ textarea {
 }
 /*end two columns with different size*/
 
-@media print
-{    
-    .no-print, .no-print *
-    {
-        display: none !important;
-    }
-}
-
 
 @media print {
   body * {
