@@ -1,8 +1,7 @@
-const { app, BrowserWindow, Menu } = require('electron');
-
+const { app, BrowserWindow } = require('electron');
 const path = require('path');
 
-var mainWindow;
+var mainWindow;  //was missing, 12.1.22
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) { // eslint-disable-line global-require
@@ -11,26 +10,18 @@ if (require('electron-squirrel-startup')) { // eslint-disable-line global-requir
 
 const createWindow = () => {
   // Create the browser window.
-//  const mainWindow = new BrowserWindow({
-   // width: 800,height: 600,icon: __dirname + '/icon.ico'});
-  //  width: 800,height: 600});
-  // and load the index.html of the app. */
-  
   const mainWindow = new BrowserWindow({
-    width: 800,height: 600,
-   webPreferences: {
-    contextIsolation: true
-  }
+    width: 1024,
+    height: 768,
+	icon: __dirname + '/images/icons/icon.png',
   });
-  
- mainWindow.setMenuBarVisibility(false);
-  
-  mainWindow.maximize();
-  
+
+  // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
+  
 
   // Open the DevTools.
-//  mainWindow.webContents.openDevTools();
+ // mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
@@ -53,26 +44,4 @@ app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
   }
-const mainMenu = Menu.buildFromTemplate(menuTemplate);
-  Menu.setApplicationMenu(mainMenu);
 });
-
-const menuTemplate = [
-  {
-    label: 'File',
-    submenu: [
-            {
-        label: 'Quit',
-        accelerator: process.platform === 'darwin' ? 'Command+Q' : 'Ctrl+Q',
-        click() {
-          app.quit();
-        }
-      }
-    ]
-  }
-];
-
-if (process.platform === 'darwin') {
-  menuTemplate.unshift({});
-}
-
