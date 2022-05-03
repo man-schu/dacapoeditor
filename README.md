@@ -19,6 +19,8 @@ http://kurs.schacherl.info/ABC-Musiknotation/abc_syntax/abc_syntax.html - an ext
 
 https://www.biteyourownelbow.com/abcnotation.htm - a very short introduction
 
+http://abcplus.sourceforge.net/abcplus_en.pdf - manual for ABC plus
+
 
 ### ABC syntax examples
 https://abcnotation.com/examples
