@@ -69,7 +69,7 @@
       }
     }
   </script>	
-  <style>
+ <!-- <style>
    @media print {
       header, footer, .footer, nav button, button, main section {
         display: none;
@@ -78,7 +78,22 @@
         display: block;
       }
     }
+  </style> -->
+	
+<style>
+    @media print {
+      header, footer, nav button, main section {
+        display: none;
+      }
+      main section.output {
+        display: block;
+      }
+        [fill="#ff0000"] {
+            fill: currentColor;
+        }
+    }
   </style>
+	
 </head>
 <body>
 
@@ -169,8 +184,8 @@ function download() {
     <button class="button-2" onclick="window.print()"><i class="fa fa-print" aria-hidden="true"></i> Print music sheet</button>
   </section>
  <section class="output">
-
-   <span id="paper"></span>   
+	 <span id="canvas"></span>
+   <!-- <span id="paper"></span>    -->
  </section>
 
     </div>
