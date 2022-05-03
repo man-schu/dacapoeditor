@@ -151,14 +151,15 @@ input,textarea{width:100%;display:block}
 }
 
 /* Create two unequal columns that floats next to each other */
-@media (min-width: 1081px) {
+@media (min-width: 1080px) {
 
 .column {
  float: left;
-  padding: 10px;
+ /* padding: 10px;
   display: grid;
   gap: 4px;
-  grid-auto-flow: column;
+  grid-auto-flow: column;*/
+  
 }
 
 .left {
