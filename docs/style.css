@@ -123,9 +123,8 @@ background:	lightgrey;
   to {opacity:1 ;}
 }
 
-textarea {
-    display: block;
-}
+
+input,textarea{width:100%;display:block}
 
 .tiledBackground {
     background-size: 150px;

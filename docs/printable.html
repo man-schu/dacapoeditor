@@ -26,13 +26,23 @@
           options: { displayRestart: true, displayPlay: true, displayProgress: true, displayWarp: true }
         },
         abcjsParams: {
-         /*responsive: "resize", problem: also applies to the screen view. Better make an extra printable page.*/
+         responsive: "resize", /*problem: also applies to the screen view. Better make an extra printable page.*/
           oneSvgPerLine: true
         }
       });
     };
   </script>	
  
+ <!-- <style>
+   @media print {
+      header, footer, .footer, nav button, button, main section {
+        display: none;
+      }
+      main section.output {
+        display: block;
+      }
+    }
+  </style> -->
 	
 <style>
     @media print {
@@ -135,7 +145,7 @@ function download() {
 		  
       <div class="column right">
 	    <section>
-    <button class="button-2" onclick="location.href='printable.html';" value="printable page"><i class="fa fa-print" aria-hidden="true"></i> Open printable page</button>
+    <button class="button-2" onclick="window.print()"><i class="fa fa-print" aria-hidden="true"></i> Print music sheet</button>
   </section>
  <section class="output">
 	 <span id="canvas"></span>
