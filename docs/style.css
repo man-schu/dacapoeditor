@@ -33,6 +33,21 @@ header h1
   background-color: rgb(249,250,251);
 }
 
+  .button-3 {
+  background-color: #AEF359;
+  border: 0;
+  border-radius: .5rem;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none solid;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.button-3:hover {
+  background-color: rgb(249,250,251);
+}
 .footer {
   position: fixed;
   left: 0;

@@ -26,13 +26,23 @@
           options: { displayRestart: true, displayPlay: true, displayProgress: true, displayWarp: true }
         },
         abcjsParams: {
-         responsive: "resize", /*problem: disables %%scale.*/
+       /*  responsive: "resize", problem: resize sets back scaling via %%scale	.*/
           oneSvgPerLine: true
         }
       });
     };
   </script>	
  
+ <!-- <style>
+   @media print {
+      header, footer, .footer, nav button, button, main section {
+        display: none;
+      }
+      main section.output {
+        display: block;
+      }
+    }
+  </style> -->
 	
 <style>
     @media print {
@@ -76,37 +86,45 @@
 	  <br>    
     <textarea class="input" id="abc" cols="60" rows="25" spellcheck="false">
 X: 1
-T: Here comes the title
-T: Here may come a subtitle
-C: Composer
-O: Year etc.
-P: Parts (if any)
-Q: "Allegro" 1/4 = 120 % tempo
-S: Here may come the source
-M:4/4
-K: C
-%%measurenb 2
-%%barsperstaff 7
-%%vocalfont Times 12
-%%score [1 | 2 | 3 | 4]
-%%scale 0.95
+M:none
+%%textfont Courier 8
+K: C clef=none
+%%scale 1.1
 %%pagewidth 21cm
-L: 1/4
-V:1 name="S" sname="S."
-A2|A G A B|
-w:here come the ly-rics
-V:2 name="A" sname="A."
-E2|E E E G|
-w:
-V:3 name="T" sname="T."
-c2|c B c d|
-w:
-V:4 bass name="B" sname="B." 
-A,2|A, E, A, G,|
-w: 
-    
-W:Some more text below the score
-    
+%%stretchlast 1
+x 
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
     </textarea>
     <br>
      <button id="button" onclick="download();">save as</button>
@@ -135,7 +153,7 @@ function download() {
 		  
       <div class="column right">
 	    <section>
-	<button class="button-3" onclick="location.href='indexunresp.html'" type="button">create empty music sheets</button><br><br>
+		<button class="button-3" onclick="location.href='index.html'" type="button">Normal music sheet editing</button><br><br>
     <button class="button-2" onclick="window.print()"><i class="fa fa-print" aria-hidden="true"></i> Print music sheet</button>
   </section>
  <section class="output">
