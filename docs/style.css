@@ -35,7 +35,7 @@ header h1
 
   .button-3 {
   margin:0 auto;
-  display:block;
+  display:inline-block;
   background-color: #AEF359;
   border: 0;
   border-radius: .5rem;
