@@ -26,7 +26,7 @@
           options: { displayRestart: true, displayPlay: true, displayProgress: true, displayWarp: true }
         },
         abcjsParams: {
-         responsive: "resize", /*problem: disables %%scale.*/
+         responsive: "resize", /*problem: sort of disables %%scale.*/
           oneSvgPerLine: true
         }
       });
@@ -55,7 +55,7 @@
     <h1>DaCapo Editor - ABC Music Editor</h1>
   </header>   
 <main>
-
+<button class="button-3" onclick="location.href='indexunresp.html'" type="button">create empty music sheets</button>
   <section>
  <div class="infobox"> <p>ABC notation is a non-commercial open standard for music notation as text. 
 	     For the present application we are using Abcjs. 
@@ -135,7 +135,7 @@ function download() {
 		  
       <div class="column right">
 	    <section>
-	<button class="button-3" onclick="location.href='indexunresp.html'" type="button">create empty music sheets</button><br><br>
+	<button class="button-3" onclick="location.href='indexunresp.html'" type="button">create empty music sheets</button>
     <button class="button-2" onclick="window.print()"><i class="fa fa-print" aria-hidden="true"></i> Print music sheet</button>
   </section>
  <section class="output">
