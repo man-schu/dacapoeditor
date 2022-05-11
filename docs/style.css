@@ -48,6 +48,17 @@ header h1
 .button-3:hover {
   background-color: rgb(249,250,251);
 }
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
 .footer {
   position: fixed;
   left: 0;
