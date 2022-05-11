@@ -34,6 +34,8 @@ header h1
 }
 
   .button-3 {
+  margin:0 auto;
+  display:block;
   background-color: #AEF359;
   border: 0;
   border-radius: .5rem;
@@ -49,14 +51,7 @@ header h1
   background-color: rgb(249,250,251);
 }
 
-.center {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
+
 
 
 .footer {
