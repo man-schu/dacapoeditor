@@ -50,3 +50,6 @@ https://www.folktunefinder.com/
 
 http://abctunesearch.com/
 
+## Credits
+
+Thanks to [paulrosen/abcjs] for his great library abcjs.
