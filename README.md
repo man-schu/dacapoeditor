@@ -52,4 +52,4 @@ http://abctunesearch.com/
 
 ## Credits
 
-Thanks to [Paul Rosen](https://github.com/paulrosen/abcjs) for his great library abcjs.
+Thanks to [Paul Rosen](https://github.com/paulrosen/abcjs) for his great ABCJS library.
