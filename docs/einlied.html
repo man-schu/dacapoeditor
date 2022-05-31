@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="author" content="Manfred Schulenburg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet" type="text/css" media="screen">
+  <link rel="shortcut" href="favicon.ico" type="image/x-icon"/>
+  <title>DaCapo Editor - ABC Music Editor</title>
+  <link rel="stylesheet" type="text/css" href="abcjs-audio.css">
+  <link rel="icon" type="image/png" href="dacapo.png" />
+  <script src="abcjs-basic-min.js" type="text/javascript"></script>
+  <script src="functions.js" type="text/javascript"></script>
+ <!-- For nice printing check https://github.com/paulrosen/abcjs/blob/main/examples/printable.html. -->
+<script src="FileSaver.min.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+      new ABCJS.Editor("abc", {
+        canvas_id: "canvas",
+        generate_warnings: true,
+        warnings_id: "warnings",
+        synth: {
+          el: "#audio",
+          options: { displayRestart: true, displayPlay: true, displayProgress: true, displayWarp: true }
+        },
+        abcjsParams: {
+         responsive: "resize", /*problem: sort of disables %%scale.*/
+          oneSvgPerLine: "true"
+        }
+      });
+    };
+  </script>	
+ 
+	
+<style>
+    @media print {
+      header, footer, .footer, nav button, button, main section {
+        display: none;
+      }
+      main section.output {
+        display: block;
+      }
+        [fill="#ff0000"] {
+            fill: currentColor;
+        }
+    }
+  </style>
+	
+</head>
+<body>
+
+  <header>
+    <h1>Comment deviner la mesure d'une pièce</h1>
+  </header>   
+<main>
+
+  <section>
+ 
+  <br><br><br>
+  </section>
+  <div class="row">
+    <div class="column left">
+	    
+	    
+      <section>
+	 
+
+	 <h2>The original: <a href="https://www.youtube.com/watch?v=r0ZNHdK96_4&t=59s" target="_blank">Youtube</a>.</h2>     
+    <textarea class="input" id="abc" cols="60" rows="25" spellcheck="false">
+X: 1
+T: Une chanson
+Q: 240
+M:6/8
+K: C
+L: 1/8
+c3 AEC| ^D4 z2 |D3 FGc| B3 z3|A3 EGF| E3 A,B,C|E D C2 B,2|A,4 z2|
+    
+    </textarea>
+    <br>
+     <button id="button" onclick="download();">save as</button>
+     <label>Filename: <input type="text" class="input" id="text-filename" placeholder="abc-file"/>.abc</label>
+
+<script type="text/javascript">
+function download() {
+  var save = document.getElementById("abc").value;
+  var filename = document.getElementById("text-filename").value;
+  var blob = new Blob([save], {
+    type: "text/plain;charset=utf-8"
+  });
+  if (filename == "") {saveAs(blob, "abc-file.abc");}
+  else {saveAs(blob, filename+".abc");}
+}
+	      </script>
+	      <br><br>
+	     
+
+  <span style="display:flex;" id="audio"></span>
+<br>
+
+  </section>
+          </div>
+		  
+		  
+      <div class="column right">
+	    <section>
+	    <button class="button-2" onclick="window.print()"><i class="fa fa-print" aria-hidden="true"></i> Print music sheet</button>
+  </section>
+ <section class="output" style="background-color:#EAECEE;">
+	 <span id="canvas"></span>
+   <!-- <span id="paper"></span>    -->
+ </section>
+
+    </div>
+  </div>
+	<!--<br><button class="button-3" onclick="location.href='indexunresp.html'" type="button">create empty music sheets</button><br>-->
+
+	
+  </main>
+	<br>
+	<br>
+	<br>
+    <div class="footer">
+    <p>Version 1.1.3</p>
+    <div>
+  <script src="import.js"></script>
+</body>
+</html>
