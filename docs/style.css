@@ -172,7 +172,7 @@ input,textarea{width:100%;display:block}
 }
 
 /* Create two unequal columns that floats next to each other */
-@media (min-width: 1080px) {
+@media (min-width: 768px) {
 
 .column {
  float: left;
@@ -199,7 +199,7 @@ input,textarea{width:100%;display:block}
 }
 
 
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
 .column {
  float: none;
 }
