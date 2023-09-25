@@ -3,7 +3,7 @@
   "productName": "dacapoeditor",
   "version": "1.1.7",
   "description": "DaCapo Editor - ABC Music Editor",
-  "main": "src/index.js",
+  "main": "docs/index.js",
   "directories": {
         "buildResources": "build"
     },
@@ -26,32 +26,32 @@
   "config": {
     "forge": {
       "packagerConfig": {
-         "icon": "src/images/icons/icon"
+         "icon": "docs/images/icons/icon"
               },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
             "name": "dacapoeditor",
-            "setupIcon": "src/images/icons/icon.ico",
+            "setupIcon": "docs/images/icons/icon.ico",
             "iconUrl": "https://raw.githubusercontent.com/man-schu/dacapoeditor/main/images/icons/icon.ico"
           }
         },
         {
           "name": "@electron-forge/maker-dmg",
-          "icon": "src/images/icons/icon.icns",
+          "icon": "docs/images/icons/icon.icns",
                    "platforms": [
             "darwin"
           ]
         },
         {
           "name": "@electron-forge/maker-deb",
-          "icon": "src/images/icons/icon.png",
+          "icon": "docs/images/icons/icon.png",
                     "config": {}
         },
         {
           "name": "@electron-forge/maker-rpm",
-          "icon": "src/images/icons/icon.png",
+          "icon": "docs/images/icons/icon.png",
                     "config": {}
         }
       ],
