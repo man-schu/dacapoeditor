@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="author" content="Manfred Schulenburg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="style.css" rel="stylesheet" type="text/css" media="screen">
+  <link rel="shortcut" href="favicon.ico" type="image/x-icon"/>
+  <title>DaCapo Editor - ABC Music Editor</title>
+  <link rel="stylesheet" type="text/css" href="abcjs-audio.css">
+  <link rel="icon" type="image/png" href="dacapo.png" />
+  <script src="abcjs-basic-min.js" type="text/javascript"></script>
+  <script src="functions.js" type="text/javascript"></script>
+ <!-- For nice printing check https://github.com/paulrosen/abcjs/blob/main/examples/printable.html. -->
+<script src="FileSaver.min.js"></script>
+<script type="text/javascript">
+    window.onload = function () {
+      new ABCJS.Editor("abc", {
+        canvas_id: "canvas",
+        generate_warnings: true,
+        warnings_id: "warnings",
+        synth: {
+          el: "#audio",
+          options: { displayRestart: true, displayPlay: true, displayProgress: true, displayWarp: true }
+        },
+        abcjsParams: {
+       /*  responsive: "resize", problem: resize sets back scaling via %%scale	.*/
+          oneSvgPerLine: true
+        }
+      });
+    };
+  </script>	
+ 
+ <!-- <style>
+   @media print {
+      header, footer, .footer, nav button, button, main section {
+        display: none;
+      }
+      main section.output {
+        display: block;
+      }
+    }
+  </style> -->
+	
+<style>
+    @media print {
+      header, footer, .footer, nav button, button, main section {
+        display: none;
+      }
+      main section.output {
+        display: block;
+      }
+        [fill="#ff0000"] {
+            fill: currentColor;
+        }
+    }
+  </style>
+	
+</head>
+<body>
+
+  <header>
+    <h1>DaCapo Editor - ABC Music Editor</h1>
+  </header>   
+<main>
+<button class="button-3" onclick="location.href='index.html'" type="button">Normal music sheet editing</button><br><br>
+  <section>
+ <div class="infobox"> <p>ABC notation is a non-commercial open standard for music notation as text. 
+	     For the present application we are using Abcjs. 
+	     Abcjs is a Javascript based implementation of ABC notation which can be integrated in html files.
+	     Find more information about the tool and about Absjs in general on <a href="https://github.com/man-schu/dacapoeditor/" target="blank">https://github.com/man-schu/dacapoeditor/</a>.</p>
+		 <p><a href="abc-intro.html" target="blank">A short introduction to ABC notation with examples.</a></p></div>
+  <br><br><br>
+  </section>
+  <div class="row">
+    <div class="column left">
+	    
+	    
+      <section>
+	  <input class="centered" type="file">
+
+	      <p>When loading an abc file, click in the text area to refresh the music sheet.</p>
+	      <p>Observe that the music sheet will not refresh if the abc file contains errors.</p>
+	  <br>    
+    <textarea class="input" id="abc" cols="60" rows="25" spellcheck="false">
+X: 1
+M:none
+%%textfont Courier 8
+K: C clef=none
+%%scale 1.1
+%%pagewidth 21cm
+%%stretchlast 1
+x 
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+w:_
+x
+    </textarea>
+    <br>
+     <button id="button" onclick="download();">save as</button>
+     <label>Filename: <input type="text" class="input" id="text-filename" placeholder="abc-file"/>.abc</label>
+
+<script type="text/javascript">
+function download() {
+  var save = document.getElementById("abc").value;
+  var filename = document.getElementById("text-filename").value;
+  var blob = new Blob([save], {
+    type: "text/plain;charset=utf-8"
+  });
+  if (filename == "") {saveAs(blob, "abc-file.abc");}
+  else {saveAs(blob, filename+".abc");}
+}
+	      </script>
+	      <br><br>
+	     
+
+  <span style="display:flex;" id="audio"></span>
+<br>
+
+  </section>
+          </div>
+		  
+		  
+      <div class="column right">
+	    <section>
+		<button class="button-2" onclick="window.print()"><i class="fa fa-print" aria-hidden="true"></i> Print music sheet</button>
+  </section>
+ <section class="output">
+	 <span id="canvas"></span>
+   <!-- <span id="paper"></span>    -->
+ </section>
+
+    </div>
+  </div>
+  </main>
+	<br>
+	<br>
+	<br>
+    <div class="footer">
+    <p>Version 1.1.6</p>
+    <div>
+  <script src="import.js"></script>
+</body>
+</html>
