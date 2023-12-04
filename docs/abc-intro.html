@@ -31,8 +31,78 @@ function printDiv() {
     newWin.close();
 }
   </style>
+  <script src="abcjs-basic-min.js" type="text/javascript"></script>
+  
+  <script type="text/javascript">
+		var abc1 = "A2 Bc|cB A2|";
+		var abc2 = "X:1\n" +
+			"M:2/4\n" +
+			"L: 1/8\n" +
+			"K:C\n" +
+			"A2 Bc|cB A2|";
+		var abc3 = "X:1\n" +
+			"M:2/4\n" +
+			"L: 1/8\n" +
+			"K:C\n" +
+			"A/2 A1/2 Bc|cB A2|";
+		var abc4 = "X: 1\n" +
+			"T: ¡Ay! Linda Amiga\n" +
+			"C: Anónimo\n" +
+			"O: s. XVI\n" +
+			"M: 2/4\n" +
+			"L: 1/8\n" +
+			"K: C\n" +
+			"%%barsperstaff 8\n" +
+			"%%vocalfont Times 12\n" +
+			"%%score [1 | 2 | 3 | 4]\n" +
+			"%%scale 0.95\n" +
+			"%%pagewidth 21cm\n" +
+			"V:1 name=\"Soprano\" sname=\"S.\"\n" +
+			"A2 Ac|B2 BG|A2 GF|E2 E2|A2 Ac|BB BG|A2 GF|E2E2||\n" +
+			"w:¡Ay! lin da~a mi-ga que no vuel-vo~a ver-te, cuer-po ga-rri do que me lle-va~a la muer-te\n" +
+			"V:2 name=\"Alto\" sname=\"A.\"\n" +
+			"A2 AA|G2 GE|F2 DF|E2 E2|A2 AA|GG GE|F2 DF|E2 E2||\n" +
+			"V:3 name=\"Tenor\" sname=\"T.\"\n" +
+			"c2 cc|e2 ee|d2AA|c2 c2|c2 cc|ee ee|d2 AA|c2 c2||\n" +
+			"w:¡Ay! lin da~a mi-ga que no vuel-vo~a ver-te, cuer-po ga-rri do que me lle-va~a la muer-te\n" +
+			"V:4 bass name=\"Bajo\" sname=\"B.\"\n" +
+			"B,2 B,B,|F,2 F,F,|E,2 E,E,|B,2 B,2|B,2 B,B,|F,F, F,F,|E,2 E,E,|B,2 B,2||";
+		var abc5 = "X: 1\n" +
+			"T: New World Symphony\n" +
+			"C: Antonín Dvořák\n" +
+			"%%measurenb 0\n" +
+			"M: 4/4\n" +
+			"L: 1/8\n" +
+			"%Q:120\n" +
+			"(!p!E>G G2 E>D C2)|(D>E GE D4)|(D>E G2 E>D C2)|(D>E DC C4)|\n" +
+			"(!<(!A>c c2 BG !<)!A2)|(!>(!AcBG !>)!A4)|(A>c c2BG A2)|\n" +
+			"(!>(!AcBG A2) (3 DEF!>)!|(!p!E>G G2 E>D C2)|(D>E GE D4)|\n" +
+			"!<(!E>G G2 c>d e2!<)!|!f!d>!>(!c dA c2 (3 ABc!>)!|d3 c d2 A2|c8|]";
+		var abc6 = "A, B, C D E F G A B c d e f g a b c' d' e'"
+		var abc7 = "X: 1\n" +
+			"M:4/4\n" +
+			"L: 1/8\n" +
+			"K: C\n" +
+			"V: 1 bass\n" +
+			"D z G,F, z2 B,2|";
+		var abc8 = "X: 1\n" +
+			"L: 1/4\n" +
+			"K: C bass\n" +
+			"C,, D,, E,, F,, G,, A,, B,, C, D, E, F, G, A, B, c, d, e, f, g,";
+				
+		function load() {
+			ABCJS.renderAbc("paper1", abc1);
+			ABCJS.renderAbc("paper2", abc2);
+			ABCJS.renderAbc("paper3", abc3);
+			ABCJS.renderAbc("paper4", abc4);
+			ABCJS.renderAbc("paper5", abc5);
+			ABCJS.renderAbc("paper6", abc6);
+			ABCJS.renderAbc("paper7", abc7);
+			ABCJS.renderAbc("paper8", abc8);
+		}
+	</script>
 </head>
-<body>
+<body onload="load()">
 
   <header>
     <h1>A short ABC introduction with examples</h1>
@@ -50,7 +120,7 @@ function printDiv() {
 </div>
 
 <p>Result:</p>
-<img src="images/examples/example01.png" alt="less than the minimum">
+<div class="container"><div id="paper1"></div></div>
 <p>Some basic information is missing, but it still works with Abcjs due to some predefined default values.<br>In this example the application "supposes" that the metre is 4/4, the note unit length is 1/8 and that the key (clef) is C.</p>
 
 <h2>Notes and minimum header tags</h2>
@@ -66,7 +136,7 @@ A2 Bc|cB A2|
 </code>
 </div>
 <p>Result:</p>
-<img src="images/examples/example02.png" alt="the minimum">
+<div class="container"><div id="paper2"></div></div>
 
 <p>Notations and their meanings:</p>
 <div class="infobox2"> 
@@ -90,7 +160,7 @@ A/2 A1/2 Bc|cB A2|
 </code>
 </div>
 <p>Result:</p>
-<img src="images/examples/example03.png" alt="the minimum">
+<div class="container"><div id="paper3"></div></div>
 
 <h2>Example for a choir score</h2>
 <p>ABC notation:</p>
@@ -121,7 +191,7 @@ B,2 B,B,|F,2 F,F,|E,2 E,E,|B,2 B,2|B,2 B,B,|F,F, F,F,|E,2 E,E,|B,2 B,2||<br>
 </code>
 </div>
 <p>Result:</p>
-<img src="images/examples/example04.png" alt="choir score">
+<div class="container"><div id="paper4"></div></div>
 <p>Notations and their meanings:</p>
 <div class="infobox2"> 
 <table>
@@ -158,7 +228,7 @@ L: 1/8<br>
 </code>
 </div>
 <p>Result:</p>
-<img src="images/examples/example05.png" alt="some often used symbols">
+<div class="container"><div id="paper5"></div></div>
 <p>Notations and their meanings:</p>
 <div class="infobox2"> 
 <table>
@@ -182,7 +252,7 @@ A, B, C D E F G A B c d e f g a b c' d' e'
 </code>
 </div>
 <p>Result:</p>
-<img src="images/examples/example06.png" alt="the notes">
+<div class="container"><div id="paper6"></div></div>
 
 <h2>Bass key</h2>
 <p>ABC notation:</p>
@@ -190,14 +260,14 @@ A, B, C D E F G A B c d e f g a b c' d' e'
 <code>
 X: 1<br>
 M:4/4<br>
-K: C<br>
 L: 1/8<br>
+K: C<br>
 V: 1 bass<br>
 D z G,F, z2 B,2|<br>
 </code>
 </div>
 <p>Result:</p>
-<img src="images/examples/example07.png" alt="the notes">
+<div class="container"><div id="paper7"></div></div>
 <p>Notations and their meanings:</p>
 <div class="infobox2"> 
 <table>
@@ -210,13 +280,13 @@ D z G,F, z2 B,2|<br>
 <div class="abcbox"> 
 <code>
 X: 1<br>
-K: C bass<br>
 L: 1/4<br>
+K: C bass<br>
 C,, D,, E,, F,, G,, A,, B,, C, D, E, F, G, A, B, c, d, e, f, g,  
 </code>
 </div>
 <p>Result:</p>
-<img src="images/examples/example08.png" alt="the notes">
+<div class="container"><div id="paper8"></div></div>
 <p>Notations and their meanings:</p>
 <div class="infobox2"> 
 <table>
