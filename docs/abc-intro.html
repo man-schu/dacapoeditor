@@ -7,6 +7,7 @@
   <meta name="author" content="Manfred Schulenburg">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="infostyle.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="style.css" rel="stylesheet" type="text/css" media="screen">
   <link rel="stylesheet" href="infostyle.css" type="text/css" media="print" >
   <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <title>ABC introduction</title>
@@ -111,7 +112,8 @@ function printDiv() {
 
   
 <main>
-
+<table id="colouredtable">
+<tr><td>
 <h2>Notes only</h2>
 <p>The following example is actually less than the minimum:</p>
 <p>ABC notation:</p>
@@ -122,7 +124,8 @@ function printDiv() {
 <p>Result:</p>
 <div class="container"><div id="paper1"></div></div>
 <p>Some basic information is missing, but it still works with Abcjs due to some predefined default values.<br>In this example the application "supposes" that the metre is 4/4, the note unit length is 1/8 and that the key (clef) is C.</p>
-
+</tr></td>
+<tr><td>
 <h2>Notes and minimum header tags</h2>
 <p>The following example is normally considered as the minimum defined in the ABC notation standard:</p>
 <p>ABC notation:</p>
@@ -161,7 +164,8 @@ A/2 A1/2 Bc|cB A2|
 </div>
 <p>Result:</p>
 <div class="container"><div id="paper3"></div></div>
-
+</tr></td>
+<tr><td>
 <h2>Example for a choir score</h2>
 <p>ABC notation:</p>
 <div class="abcbox"> 
@@ -208,7 +212,8 @@ B,2 B,B,|F,2 F,F,|E,2 E,E,|B,2 B,2|B,2 B,B,|F,F, F,F,|E,2 E,E,|B,2 B,2||<br>
 </table>
 </div>
 
-
+</tr></td>
+<tr><td>
 
 <h2>Some more often used symbols in ABC notation</h2>
 <p>ABC notation:</p>
@@ -243,7 +248,8 @@ L: 1/8<br>
 </table>
 </div>
 
-
+</tr></td>
+<tr><td>
 <h2>The notes</h2>
 <p>ABC notation:</p>
 <div class="abcbox"> 
@@ -253,6 +259,9 @@ A, B, C D E F G A B c d e f g a b c' d' e'
 </div>
 <p>Result:</p>
 <div class="container"><div id="paper6"></div></div>
+
+</tr></td>
+<tr><td>
 
 <h2>Bass key</h2>
 <p>ABC notation:</p>
@@ -291,6 +300,9 @@ C,, D,, E,, F,, G,, A,, B,, C, D, E, F, G, A, B, c, d, e, f, g,
 <div class="infobox2"> 
 <table>
   <tr><td><code>K: C bass</code></td><td>Bass clef.</td></tr>
+</table>
+
+</tr></td>
 </table>
 </div>
 
