@@ -67,8 +67,12 @@ header h1
   text-align: center;
 }
 
+#colouredtable tr:nth-child(odd){background:#FFF8DC;}
+#colouredtable tr:nth-child(even){background:white}
 
-
+th, td {
+  padding: 15px;
+}
 	
 .infobox {
 width: 100%;
